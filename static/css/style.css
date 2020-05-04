@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(12em, auto))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(12em, auto));
+  gap: 1em;
+}
+
+.container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.4em 1em;
+  text-transform: capitalize;
+  opacity: .7;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+.container .nav .menu .logo img {
+  width: 9em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .nav .menu .menu__item {
+  margin: 0 2em;
+}
+
+.container .main .hero-banner {
+  margin-top: 7.5em;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../img/aqua-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container .main .info .grid {
+  -ms-grid-columns: (minmax(25em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+}
+
+.container .main .info .grid .aqua-logo img {
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.container .main .info .grid .aquaworld {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 1.6em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.container .main .info .grid .aquaworld h2 {
+  text-align: center;
+}
+
+.container .main .info .grid .aquaworld p {
+  margin-bottom: 1em;
+}
+
+.container .main .services {
+  height: 80vh;
+  background-color: mediumseagreen;
+}
+
+.container .main .services .commercial-solutions,
+.container .main .services .residential-solutions,
+.container .main .services .ro-alkaline {
+  width: 20em;
+  height: 10em;
+  border: 1px solid black;
+  cursor: pointer;
+  -webkit-transition: ease all .3s;
+  transition: ease all .3s;
+}
+
+.container .main .services .commercial-solutions:hover,
+.container .main .services .residential-solutions:hover,
+.container .main .services .ro-alkaline:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.container .main .services .commercial-solutions {
+  background-color: midnightblue;
+}
+
+.container .main .services .residential-solutions {
+  background-color: orangered;
+}
+
+.container .main .services .ro-alkaline {
+  background-color: mediumorchid;
+}
+
+.container .main .video {
+  width: 100%;
+  height: 100vh;
+}
+
+.container .main .video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.container .footer {
+  color: #fff !important;
+  background-color: #262626;
+}
+
+.container .footer .contact-us {
+  padding: 6em;
+}
+
+.container .footer .contact-us .grid {
+  width: 30em;
+  margin: 0 auto;
+}
+
+.container .footer .social-networks {
+  padding: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer .social-networks i {
+  color: #fff;
+  font-size: 2.2em;
+  -webkit-transition: ease all .4s;
+  transition: ease all .4s;
+  margin: 0 1em;
+}
+
+.container .footer .social-networks i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .footer .bot-line {
+  background-color: #242222;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

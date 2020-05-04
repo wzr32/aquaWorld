@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    
+
+    &:visited{
+        text-decoration: none;
+        color: #000;
+
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, auto));
+    gap: 1em;
+}
+
+.container{
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4em 1em;
+        text-transform: capitalize;
+        opacity: .7;
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+    
+        .menu{
+            .logo{
+
+                img{
+                    width: 9em;
+                    object-fit: cover;
+                }
+            }//end logo
+    
+            .menu__item{
+                margin: 0 2em;
+            }//end menu__item
+    
+        }//end menu
+    }// end nav
+
+    .main{
+
+        .hero-banner{
+            margin-top: 7.5em;
+            height: 100vh;
+            width: 100%;
+            background-image: url(../img/aqua-img.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .info{
+            .grid{
+                grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+                .aqua-logo{
+                    
+                    img{
+                        width: 100%;
+                        object-fit: scale-down;
+                    }
+                }//end aqua-logo
+
+                .aquaworld{
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    padding: 1.6em;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+
+                    h2{
+                        text-align: center;
+                    }
+
+                    p{
+                        margin-bottom: 1em;
+                    }
+
+                }
+            }// grid
+        }//end info
+
+        .services{
+            height: 80vh;
+            background-color: mediumseagreen;
+
+            .commercial-solutions,
+            .residential-solutions,
+            .ro-alkaline {
+                width: 20em;
+                height: 10em;
+                border: 1px solid black;
+                cursor: pointer;
+                transition: ease all .3s;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+
+            .commercial-solutions{
+                background-color: midnightblue;
+            }
+
+            .residential-solutions{
+                background-color: orangered;
+            }
+
+            .ro-alkaline{
+                background-color: mediumorchid;
+            }
+
+        }//end services
+
+        .video{
+            width: 100%;
+            height: 100vh;
+
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }//end video
+    }//end main
+
+    .footer{
+        color: #fff !important;
+        background-color: #262626;
+
+        .contact-us{
+            padding: 6em;
+
+            .grid{
+                width: 30em;
+                margin: 0 auto;
+            }
+        }
+
+        .social-networks{
+            padding: 2em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                color: #fff;
+                font-size: 2.2em;
+                transition: ease all .4s;
+                margin: 0 1em;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }//end social-networks
+
+        .bot-line{
+            background-color: rgb(36, 34, 34);
+            text-align: center;
+        }
+    }//end footer
+}//end container
+
+
