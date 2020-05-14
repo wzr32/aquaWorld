@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="contact-form">
+    <h2>Apply</h2>
+    <br>
+    <form action="" method="POST">
+        {{applicant_form.csrf_token}}
+        
+        <div class="form-input">
+            {{applicant_form.last_name.label}}
+            {{applicant_form.last_name}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.first_name.label}}
+            {{applicant_form.first_name}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.ss.label}}
+            {{applicant_form.ss}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.expedition.label}}
+            {{applicant_form.expedition}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.expiration.label}}
+            {{applicant_form.expiration}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.cell_phone.label}}
+            {{applicant_form.cell_phone}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.city.label}}
+            {{applicant_form.city}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.state.label}}
+            {{applicant_form.state}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.zip_code.label}}
+            {{applicant_form.zip_code}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.email.label}}
+            {{applicant_form.email}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.employer.label}}
+            {{applicant_form.employer}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.years.label}}
+            {{applicant_form.years}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.salary.label}}
+            {{applicant_form.salary}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.position.label}}
+            {{applicant_form.position}}
+        </div>
+       
+        <div class="form-input">
+            {{applicant_form.business_phone.label}}
+            {{applicant_form.business_phone}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.previous_employer.label}}
+            {{applicant_form.previous_employer}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.other_income.label}}
+            {{applicant_form.other_income}}
+        </div>
+       
+        <div class="form-input">
+            {{applicant_form.status.label}}
+            {{applicant_form.status}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.mortgaged_company.label}}
+            {{applicant_form.mortgaged_company}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.monthy_payment.label}}
+            {{applicant_form.monthy_payment}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.long_here.label}}
+            {{applicant_form.long_here}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.personal_reference_name.label}}
+            {{applicant_form.personal_reference_name}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.personal_reference_relationship.label}}
+            {{applicant_form.personal_reference_relationship}}
+        </div>
+
+        <div class="form-input">
+            {{applicant_form.personal_reference_phone.label}}
+            {{applicant_form.personal_reference_phone}}
+        </div>
+
+       <button type="submit" class="btn">Send</button>
+       
+
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f2e1cd452b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Aqua World</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/logo_aquaword.png') }}" alt="Aqua World">
+                </div>
+
+                <div class="menu">
+                    <a href="{{ url_for('index') }}" class="menu__item">
+                        <i class="fas fa-home"></i>
+                        <span>home</span>
+                    </a>
+                    
+                    <a href="{{ url_for('products') }}" class="menu__item">
+                        <i class="fas fa-dolly-flatbed"></i>
+                        <span>products</span>
+                    </a>
+
+                    <a href="{{ url_for('videos') }}" class="menu__item">
+                        <i class="fas fa-play"></i>
+                        <span>videos</span>
+                    </a>
+
+                    <a href="{{ url_for('apply') }}" class="menu__item">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>apply</span>
+                    </a>
+
+                    <a href="" class="menu__item">
+                        <i class="fas fa-language"></i>
+                        <span>language</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            {% block content %} {% endblock content %}         
+        </main>
+
+        <div class="footer">
+            <div class="contact-us">
+                <div class="about-us">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae atque voluptatem vero in rerum et!
+                    </p>
+                </div>
+
+                <div class="call-us">
+                    555-123456789
+                </div>
+            </div>
+
+            <div class="social-networks">
+                <a href="http://#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="http://#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="http://#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <div class="bot-line">Site created by Ruben Padilla</div>
+        </div>
+    </div>
+</body>
+</html>

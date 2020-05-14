@@ -1,112 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/f2e1cd452b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>Aqua World</title>
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <nav class="nav">
-                <div class="logo">
-                    <img src="{{ url_for('static', filename='img/logo_aquaword.png') }}" alt="Aqua World">
-                </div>
+{% extends 'base.html' %}
 
-                <div class="menu">
-                    <a href="/#" class="menu__item">home</a>
-                    <a href="/#" class="menu__item">products</a>
-                    <a href="/#" class="menu__item">video</a>
-                    <a href="/#" class="menu__item">contact us</a>
-                    <a href="/#" class="menu__item">languaje</a>
-                </div>
-            </nav>
-        </header>
+{% block content %}
+    <div class="hero-banner"></div>
 
-        <main class="main">
-            <div class="hero-banner">
-
+    <div class="info">
+        <div class="grid">
+            <div class="aqua-logo">
+                <img src="{{ url_for('static', filename='img/logo_aqua.jpg') }}" alt="">
             </div>
+            <div class="aquaworld">
+                <h2>Aqua World</h2>
+        <p>
+            AquaWorld systems is committed to bringing the highest quality water to every home. We offer a personalized service to all families bringing them the best water treatment solution.
+        </p>
 
-            <div class="info">
-                <div class="grid">
-                    <div class="aqua-logo">
-                        <img src="{{ url_for('static', filename='img/logo_aqua.jpg') }}" alt="">
-                    </div>
-                    <div class="aquaworld">
-                        <h2>Aqua World</h2>
-                <p>
-                    AquaWorld systems is committed to bringing the highest quality water to every home. We offer a personalized service to all families bringing them the best water treatment solution.
-                </p>
-
-                <p>
-                    Everyone deserves the best water for their family. Purified water is not a luxury, its an essential element for life.
-                </p>
-                <p>
-                    Products we offer are a water purification system and an alkaline reverse osmosis system. Both systems improve the quality of your water and your life. Our SilverShield® technology developed by NASA, is the leading technology in the industry. Working only with patented systems certified by reputable agencies and laboratories, providing great support.
-                </p>
-                <p>
-                    We offer a variety of high level water treatment products and solutions that meet your needs. Whether it’s in your home or your business we offer a safe, clean and most importantly reliable quality water.
-                </p>
-                    </div>
-                </div>
+        <p>
+            Everyone deserves the best water for their family. Purified water is not a luxury, its an essential element for life.
+        </p>
+        <p>
+            Products we offer are a water purification system and an alkaline reverse osmosis system. Both systems improve the quality of your water and your life. Our SilverShield® technology developed by NASA, is the leading technology in the industry. Working only with patented systems certified by reputable agencies and laboratories, providing great support.
+        </p>
+        <p>
+            We offer a variety of high level water treatment products and solutions that meet your needs. Whether it’s in your home or your business we offer a safe, clean and most importantly reliable quality water.
+        </p>
             </div>
-
-            <div class="services">
-                <h2>Services</h2>
-                <div class="grid">
-                    <div class="commercial-solutions">
-                        commercial solution
-                    </div>
-    
-                    <div class="residential-solutions">
-                        residential solutions
-                    </div>
-    
-                    <div class="ro-alkaline">
-                        ro alkaline
-                    </div>    
-                </div>
-
-            </div>
-
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/8GW6sLrK40k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            
-        </main>
-
-        <div class="footer">
-            <div class="contact-us">
-                <div class="grid">
-                    <div class="about-us">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae atque voluptatem vero in rerum et!
-                        </p>
-                    </div>
-
-                    <div class="call-us">
-                        555-123456789
-                    </div>
-                </div>
-            </div>
-
-            <div class="social-networks">
-                <a href="http://#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="http://#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="http://#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
-            <div class="bot-line">Site created by Ruben Padilla</div>
         </div>
     </div>
-</body>
-</html>
+
+    <div class="services">
+        <h2>Services</h2>
+        <div class="grid">
+            <div class="commercial-solutions">
+                commercial solution
+            </div>
+
+            <div class="residential-solutions">
+                residential solutions
+            </div>
+
+            <div class="ro-alkaline">
+                ro alkaline
+            </div>    
+        </div>
+
+    </div>
+
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/8GW6sLrK40k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+{% endblock content %}

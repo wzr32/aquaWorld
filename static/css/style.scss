@@ -19,13 +19,59 @@ a{
     }
 }
 
+input{
+    // background-color: slategrey;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+    height: 2.2em;
+    margin: .5em 0;
+
+    &:focus{
+        box-shadow: none;
+    }
+
+}
+
+select{
+    width: 100%;
+    height: 2em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    display: block;
+    margin: 2em 0;
+}
+
+.btn{
+    background-color: #5ab3de;
+    border: none;
+    border-radius: 10px;
+    padding: .4em 2em;
+    color: #fff;
+    font-size: 1.1rem;
+    margin: .7em auto;
+    display: block;
+    transition: ease background-color .3s;
+
+    &:hover{
+        background-color: darken(#5ab3de, 15%);
+        cursor: pointer;
+    }
+}// btn
+
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12em, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     gap: 1em;
 }
 
 .container{
+
+    max-width: 1350px;
+    margin: 0 auto;
+
     .nav{
         display: flex;
         justify-content: space-between;
@@ -35,29 +81,73 @@ a{
         opacity: .7;
         position: fixed;
         top: 0;
+        left: 0;
         background-color: #fff;
         width: 100%;
+        z-index: 100;
     
-        .menu{
-            .logo{
+        @media (max-width: 768px){
+            top: auto;
+            bottom: 0;
 
+            
+            .logo{
                 img{
-                    width: 9em;
-                    object-fit: cover;
+                    clip-path: ellipse(13% 60% at 13% 55%);
                 }
-            }//end logo
-    
+            }
+
+            .menu{
+                
+                .menu__item{
+
+                    position: relative;
+                    span{
+                        display: none;
+                    }
+                    i{
+                        font-size: 1.3rem;
+                    }
+                }//end menu__item
+            }//end menu
+        }//end media
+
+        @media (max-width: 500px){
+            .logo{
+                display: none;
+            }
+            
+            .menu{
+                width: 100%;
+                .menu__item{
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .logo{
+            width: 7em;
+            height: 2em;
+            
+
+            img{
+                width: 100%;
+                object-fit: cover;                  
+            }
+        }//end logo
+
+        .menu{
             .menu__item{
-                margin: 0 2em;
+                margin: 0 1em;
+                
             }//end menu__item
-    
         }//end menu
     }// end nav
 
     .main{
 
         .hero-banner{
-            margin-top: 7.5em;
+            // margin-top: 7.5em;
             height: 100vh;
             width: 100%;
             background-image: url(../img/aqua-img.jpg);
@@ -67,14 +157,30 @@ a{
         }
 
         .info{
+            position: relative;
             .grid{
-                grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
                 .aqua-logo{
                     
                     img{
                         width: 100%;
-                        object-fit: scale-down;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        object-fit: contain;
                     }
+
+                    @media (max-width: 768px){
+                        img{
+                            position: absolute;
+                            top: 0%;
+                            left: 0%;
+                            opacity: .3;
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+
                 }//end aqua-logo
 
                 .aquaworld{
@@ -84,6 +190,7 @@ a{
                     padding: 1.6em;
                     flex-direction: column;
                     justify-content: space-evenly;
+                    z-index: 10;
 
                     h2{
                         text-align: center;
@@ -95,66 +202,193 @@ a{
 
                 }
             }// grid
+
+
         }//end info
 
         .services{
-            height: 80vh;
+            // height: 80%;
             background-color: mediumseagreen;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding: 20px 0;
+            position: relative;
+
+
+            .grid{
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                gap: 1em;
+            }
+            // @media (max-width:768px){
+            //     .grid {
+
+            //     }
+            // }
+
+            h2{
+                text-align: center;
+                margin: 2rem 0;
+            }
 
             .commercial-solutions,
             .residential-solutions,
             .ro-alkaline {
-                width: 20em;
+                width: 100%;
                 height: 10em;
                 border: 1px solid black;
                 cursor: pointer;
                 transition: ease all .3s;
+                position: relative;
 
-                &:hover{
-                    transform: scale(1.2);
+                &::after{
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    bottom: 0;
+                    right: 0;
+                }
+                @media (max-width: 815px){
+                    height: 20em;
                 }
             }
 
             .commercial-solutions{
-                background-color: midnightblue;
+                background: url(../img/services1.jpg);
+                background-position: top center ;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .residential-solutions{
-                background-color: orangered;
+                background: url(../img/services2.jpg);
+                background-position: top center ;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             .ro-alkaline{
-                background-color: mediumorchid;
+                background: url(../img/services3.jpg);
+                background-position: top center ;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
         }//end services
 
         .video{
             width: 100%;
-            height: 100vh;
+            height: 80vh;
+            position: relative;
 
             iframe{
+                // visibility: hidden;
                 width: 100%;
                 height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
             }
         }//end video
+
+        .products{
+            margin-top: 3em;
+            padding: 1.6em;
+
+            h2{
+                margin-bottom: 1.4em;
+            }
+            
+            .products-card{
+                width: 100%;
+
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }// products-card
+
+            .contact-card{
+                width: 100%;
+                margin: 1em auto;
+                padding: 4em 1em;
+                background-color: lightgray;
+
+                p{
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    text-align: center;
+                }
+
+                a{
+                    width: 10em !important;
+                    text-align: center !important;
+                    color: #fff !important;
+                    margin-top: 2.3em;
+                }
+            }
+        }//end products
+
+        .videos{
+            margin-top: 3em;
+            padding: 1.6em;
+
+            .video-container{
+                margin: 1em;
+                max-width: 18em;
+                border: 1px solid black;
+                border-radius: 15px;
+
+                iframe{
+                    width: 100%;
+                    border-radius: 15px 15px 0 0 ;
+                }
+
+                .description{
+                    width: 100%;
+                    margin-top: .4em;
+                    padding: .5em;
+                    text-overflow: ellipsis;
+
+                }
+
+            }//end video-container
+        }//end videos
+
+        .contact-form{
+            max-width: 800px;
+            margin: 3em auto;
+            padding: 1.6em;
+            
+            .form-input{
+                margin: 1.5em 0;
+
+            }
+
+        }//end contact-form
+
     }//end main
 
     .footer{
-        color: #fff !important;
+        color: #fff;
         background-color: #262626;
+        margin-top: .1em;
 
         .contact-us{
-            padding: 6em;
+            padding: 3em;
+            text-align: center;
 
-            .grid{
-                width: 30em;
-                margin: 0 auto;
+            .about-us{
+                margin: 1em 0;
             }
+
         }
 
         .social-networks{
-            padding: 2em 0;
+            padding: 1em 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -163,11 +397,15 @@ a{
                 color: #fff;
                 font-size: 2.2em;
                 transition: ease all .4s;
-                margin: 0 1em;
+                margin: 0 .5rem;
 
                 &:hover{
                     transform: scale(1.1);
                 }
+            }// i
+
+            @media (max-width:768px){
+                margin-bottom: 3em;
             }
         }//end social-networks
 

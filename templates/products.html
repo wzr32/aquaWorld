@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="products">
+    <h2>Products</h2>
+    <div class="grid">
+        <div class="products-card">
+            <div class="img">
+                <img src="{{ url_for('static', filename='img/beneficios1.jpg') }}" alt="product1">
+            </div>
+        </div>
+        <div class="products-card">
+            <div class="img">
+                <img src="{{ url_for('static', filename='img/beneficios2.jpg') }}" alt="product1">
+            </div>
+        </div>
+        <div class="products-card">
+            <div class="img">
+                <img src="{{ url_for('static', filename='img/beneficios3.jpg') }}" alt="product1">
+            </div>
+        </div>
+    </div>
+    <div class="contact-card">
+        <p>
+            Call us to qualify in our help programs and get these products without spending an extra dollar out of your pocket.
+        </p>
+        <a href="{{ url_for('apply') }}" class="btn">Contact Us</a>
+        
+    </div>
+</div>
+{% endblock content %}
